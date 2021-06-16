@@ -2,13 +2,14 @@
 #include <time.h>
 #include <stdlib.h>
 
-#define N 30
-#define ARR_MAX 50
+#define N		30
+#define ARR_MAX	50
 
 void	free_arr(int **arr)
 {
-	int i;
+	int	i;
 
+	i = 0;
 	while(i < N)
 	{
 		free(arr[i]);
@@ -26,7 +27,7 @@ void	err_exit(void)
 int		main(void)
 {
 	srand (time(NULL));
-	int **arr;
+	int	**arr;
 
 	if (!(arr = (int **)malloc(sizeof(int*) * N)))
 		err_exit();
